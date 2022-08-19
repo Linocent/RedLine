@@ -29,11 +29,12 @@ class Command(BaseCommand):
             data = list(spamReader)
             for row in data[1:]:
                 for cat in CATEGORIE:
-                    if str(cat) == row[1]:
+                    if str(cat.nom) == row[1]:
                         query = Vehicule(
                             nom=row[0],
                             categorie=cat,
                             prix=int(row[2]),
-                            thumbnail=f"redline_car/catalogue/{cat}/{row[0]}.jpg"
+                            thumbnail=f"redline_car/assets/catalogue/{cat.nom}/{row[0]}.jpg"
                         )
+                        print(query)
                         query.save()
