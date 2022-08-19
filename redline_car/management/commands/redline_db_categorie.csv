@@ -1,17 +1,17 @@
-Nom
-Vans
-Utilitaire
-Commerciale
-Velo
-Compact
-Coupés
-Industriel
-Militaire
-Moto
-Muscle
-Off-Road
-SUVs
-Sedan
-Sportive
-Sportive Classique
-Supercar
+Nom,Poids
+Vans,120
+Utilitaire,150
+Commerciale,240
+Velo,0
+Compact,25
+Coupés,30
+Industriel,150
+Militaire,200
+Moto,0
+Muscle,30
+Off-Road,80
+SUVs,70
+Sedan,40
+Sportive,15
+Sportive Classique,20
+Supercar,5

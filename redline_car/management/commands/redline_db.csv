@@ -18,7 +18,6 @@ Issy classique,Compact,6000
 Panto,Compact,2000
 Prairie,Compact,5500
 Rhapsody,Compact,4500
-Brioso Classique,Compact,4500
 Weevil,Compact,5500
 Cog Cabriolet,Coupés,190000
 Exemplar,Coupés,180000
@@ -34,7 +33,6 @@ Windsor,Coupés,200000
 Windsor Cabriolet,Coupés,200000
 Zion,Coupés,160000
 Zion Cabriolet,Coupés,165000
-Previon,Coupées,180000
 Guardian,Industriel,200000
 Vetir,Militaire,250000
 Akuma,Moto,110000
@@ -92,7 +90,6 @@ Chino,Muscle,170000
 Chino Cabriolet,Muscle,180000
 Clique,Muscle,175000
 Coquette,Muscle,185000
-Deviant,Muscle,180000
 Dominator,Muscle,195000
 Dominator Race,Muscle,200000
 Dominator New,Muscle,215000
@@ -123,13 +120,8 @@ Ruiner,Muscle,195000
 Sabre GT,Muscle,185000
 Sabre GT Custom,Muscle,195000
 Slamvan Pickup,Muscle,170000
-Slamvan Pickup,Muscle,165000
 Slamvan Custom,Muscle,190000
-Stalion,Muscle,175000
-Stalion Race,Muscle,180000
 Tampa,Muscle,170000
-Tulip,Muscle,170000
-Vamos,Muscle,170000
 Vigero,Muscle,165000
 Virgo,Muscle,165000
 Virgo Custom,Muscle,155000
@@ -140,7 +132,6 @@ Yosemite,Muscle,150000
 Yosemite Drift,Muscle,150000
 Yosemite 4x4,Muscle,150000
 Dominator Sport,Muscle,220000
-Bifta Injection,Off-Road,100000
 Bifta,Off-Road,120000
 Blazer,Off-Road,110000
 Blazer 4x4,Off-Road,100000
@@ -149,7 +140,6 @@ Blazer Sport,Off-Road,130000
 Bodhi,Off-Road,100000
 Brawler,Off-Road,115000
 Caracara,Off-Road,145000
-Dloader,Off-Road,100000
 Dubsta 6x6,Off-Road,165000
 Dune,Off-Road,100000
 Everon,Off-Road,140000
@@ -159,7 +149,6 @@ Kalahari,Off-Road,120000
 Kamacho,Off-Road,150000
 Marshall,Off-Road,180000
 Mesa,Off-Road,165000
-Monster,Off-Road,180000
 Outlaw,Off-Road,140000
 Rancher XL,Off-Road,110000
 Rebel Vintage,Off-Road,110000
@@ -168,15 +157,12 @@ Riata,Off-Road,125000
 Sandking,Off-Road,135000
 Sandking Sport,Off-Road,140000
 Trophy Truck,Off-Road,145000
-Trophy Truck Sport,Off-Road,145000
 Vagrant,Off-Road,160000
-Verus,Off-Road,110000
 Winky,Off-Road,130000
 Baller Vintage,SUVs,170000
 Baller,SUVs,180000
 Baller Sport,SUVs,190000
 Baller Sport Long,SUVs,200000
-BJXL,SUVs,170000
 Cavalcade,SUVs,170000
 Cavalcade Long,SUVs,175000
 Contender,SUVs,200000
@@ -190,10 +176,8 @@ Huntley,SUVs,175000
 Landstalker,SUVs,170000
 Landstalker Sport,SUVs,185000
 Mesa,SUVs,175000
-Novak,SUVs,220000
 Patriot,SUVs,200000
 Patriot Limousine,SUVs,200000
-Radi,SUVs,170000
 Rebla,SUVs,195000
 Rocoto,SUVs,185000
 Seminole,SUVs,170000
@@ -245,7 +229,6 @@ Comet GT,Sportive,500000
 Coquette,Sportive,480000
 Coquette Sport,Sportive,500000
 Drafter,Sportive,435000
-Deveste,Sportive,500000
 Elegy Retro,Sportive,440000
 Elegy,Sportive,450000
 Flash GT,Sportive,410000
@@ -283,7 +266,6 @@ Ruston,Sportive,410000
 Schafter Classique,Sportive,400000
 Schafter,Sportive,415000
 Schafter V12,Sportive,430000
-Schlagen,Sportive,435000
 Schwarzer,Sportive,430000
 Sentinel Retro,Sportive,390000
 Seven 70,Sportive,500000
@@ -297,7 +279,6 @@ Surano,Sportive,415000
 Tampa Drift,Sportive,350000
 Tropos,Sportive,390000
 Verlierer,Sportive,390000
-VSTR,Sportive,415000
 Itali RSX,Sportive,430000
 Zr 350,Sportive,425000
 Calico,Sportive,415000
@@ -305,113 +286,102 @@ Futo Sport,Sportive,400000
 Euros,Sportive,420000
 Jester GT,Sportive,425000
 Remus,Sportive,410000
-Growler,Sportive,425000
-Vectre,Sportive,425000
-Cypher,Sportive,430000
 Sultan Retro Custom,Sportive,400000
 RT 3000,Sportive,410000
-Arden,Sportive Classique,0
-B Type,Sportive Classique,0
-B Type Sport,Sportive Classique,0
-B Type Luxe,Sportive Classique,0
-Casco,Sportive Classique,0
-Cheetah Retro,Sportive Classique,0
-Coquette Retro,Sportive Classique,0
-Dynasty,Sportive Classique,0
-Fagaloa,Sportive Classique,0
-Feltzer Retro,Sportive Classique,0
-GT 500,Sportive Classique,0
-Infernus Retro,Sportive Classique,0
-JB 700,Sportive Classique,0
-Mamba,Sportive Classique,0
-Manana,Sportive Classique,0
-Michelli,Sportive Classique,0
-Monroe,Sportive Classique,0
-Nebula,Sportive Classique,0
-Peyote Cabriolet,Sportive Classique,0
-Peyote,Sportive Classique,0
-Pigalle,Sportive Classique,0
-Rapid GT Retro,Sportive Classique,0
-Retinue,Sportive Classique,0
-Retinue Sport,Sportive Classique,0
-Savestra,Sportive Classique,0
-Stinger,Sportive Classique,0
-Stinger GT,Sportive Classique,0
-Stromberg,Sportive Classique,0
-Swinger,Sportive Classique,0
-Torero,Sportive Classique,0
-Tornado,Sportive Classique,0
-Tornado Cabriolet,Sportive Classique,0
-Tornado Classique,Sportive Classique,0
-Tornado Classique Cabriolet,Sportive Classique,0
-Tornado Luxe,Sportive Classique,0
-Tornado Drag,Sportive Classique,0
-Turismo Retro,Sportive Classique,0
-Viseris,Sportive Classique,0
-Z 190,Sportive Classique,0
-Z Type,Sportive Classique,0
-Zion Retro,Sportive Classique,0
-Cheburek,Sportive Classique,0
-Toreador,Sportive Classique,0
-Adder,Supercar,0
-Autarch,Supercar,0
-Banshee GT,Supercar,0
-Bullet,Supercar,0
-Cheetah Retro,Supercar,0
-Cyclone,Supercar,0
-Entity RS,Supercar,0
-Entity XF,Supercar,0
-Emerus,Supercar,0
-FMJ,Supercar,0
-Furia,Supercar,0
-GP 1,Supercar,0
-Infernus,Supercar,0
-Itali GTB,Supercar,0
-Itali GTB Sport,Supercar,0
-Krieger,Supercar,0
-RE-7B,Supercar,0
-Nero,Supercar,0
-Nero Custom,Supercar,0
-Osiris,Supercar,0
-Penetrator,Supercar,0
-Pfister 811,Supercar,0
-X-80 Proto,Supercar,0
-Reaper,Supercar,0
-S 80,Supercar,0
-SC 1,Supercar,0
-Sheava,Supercar,0
-Sultan RS,Supercar,0
-T 20,Supercar,0
-Taipan,Supercar,0
-Tempesta,Supercar,0
-Tezeract,Supercar,0
-Thrax,Supercar,0
-Tigon,Supercar,0
-Turismo R,Supercar,0
-Tyrant,Supercar,0
-Tyrus,Supercar,0
-Vacca,Supercar,0
-Vagner,Supercar,0
-Visione,Supercar,0
-Voltic,Supercar,0
-XA 21,Supercar,0
-Zentorno,Supercar,0
-Zorrusso,Supercar,0
-Sadler,Utilitaire,0
-Bison,Vans,0
-Bobcat XL,Vans,0
-Burrito,Vans,0
-Burrito Custom,Vans,0
-Camper,Vans,0
-Journey,Vans,0
-Minivan,Vans,0
-Minivan Custom,Vans,0
-Paradise,Vans,0
-Pony,Vans,0
-Rumpo,Vans,0
-Rumpo Custom,Vans,0
-Speedo,Vans,0
-Speedo Custom,Vans,0
-Surfer,Vans,0
-Youga,Vans,0
-Youga Custom,Vans,0
+Arden,Sportive Classique,135000
+Casco,Sportive Classique,130000
+Cheetah Retro,Sportive Classique,135000
+Coquette Retro,Sportive Classique,130000
+Dynasty,Sportive Classique,26000
+Fagaloa,Sportive Classique,25000
+Feltzer Retro,Sportive Classique,60000
+GT 500,Sportive Classique,60000
+Infernus Retro,Sportive Classique,135880
+JB 700,Sportive Classique,130000
+Mamba,Sportive Classique,130000
+Manana,Sportive Classique,35000
+Michelli,Sportive Classique,35000
+Monroe,Sportive Classique,135000
+Nebula,Sportive Classique,35000
+Peyote Cabriolet,Sportive Classique,42500
+Peyote,Sportive Classique,45000
+Pigalle,Sportive Classique,60000
+Rapid GT Retro,Sportive Classique,130000
+Retinue,Sportive Classique,52000
+Retinue Sport,Sportive Classique,52000
+Savestra,Sportive Classique,125000
+Stinger,Sportive Classique,120000
+Stinger GT,Sportive Classique,120000
+Stromberg,Sportive Classique,140000
+Swinger,Sportive Classique,130000
+Torero,Sportive Classique,125000
+Tornado,Sportive Classique,30000
+Tornado Cabriolet,Sportive Classique,37600
+Tornado Classique,Sportive Classique,25000
+Tornado Classique Cabriolet,Sportive Classique,27000
+Tornado Luxe,Sportive Classique,36000
+Turismo Retro,Sportive Classique,135880
+Viseris,Sportive Classique,135000
+Zion Retro,Sportive Classique,50000
+Cheburek,Sportive Classique,120000
+Adder,Supercar,390000
+Autarch,Supercar,385800
+Banshee GT,Supercar,377200
+Bullet,Supercar,335000
+Cheetah Retro,Supercar,379880
+Cyclone,Supercar,310000
+Entity RS,Supercar,366400
+Entity XF,Supercar,367600
+Emerus,Supercar,400500
+FMJ,Supercar,368880
+Furia,Supercar,358600
+GP 1,Supercar,385600
+Infernus,Supercar,325600
+Itali GTB,Supercar,360800
+Itali GTB Sport,Supercar,360000
+Krieger,Supercar,432000
+RE-7B,Supercar,375880
+Nero,Supercar,398800
+Nero Custom,Supercar,421600
+Osiris,Supercar,360400
+Penetrator,Supercar,348800
+Pfister 811,Supercar,414600
+X-80 Proto,Supercar,440000
+Reaper,Supercar,380200
+S 80,Supercar,375280
+SC 1,Supercar,325000
+Sultan RS,Supercar,315800
+T 20,Supercar,404800
+Taipan,Supercar,392880
+Tempesta,Supercar,370800
+Tezeract,Supercar,389880
+Thrax,Supercar,450000
+Tigon,Supercar,378800
+Turismo R,Supercar,346200
+Tyrant,Supercar,410800
+Tyrus,Supercar,384840
+Vacca,Supercar,344880
+Vagner,Supercar,406400
+Visione,Supercar,394880
+Voltic,Supercar,300000
+XA 21,Supercar,347500
+Zentorno,Supercar,372680
+Zorrusso,Supercar,394680
+Sadler,Utilitaire,62600
+Bison,Vans,29000
+Bobcat XL,Vans,27000
+Burrito,Vans,25000
+Burrito Custom,Vans,27000
+Camper,Vans,17000
+Journey,Vans,15000
+Minivan,Vans,28000
+Minivan Custom,Vans,28000
+Paradise,Vans,25000
+Pony,Vans,26000
+Rumpo,Vans,26000
+Rumpo Custom,Vans,30000
+Speedo,Vans,28000
+Speedo Custom,Vans,28500
+Surfer,Vans,27500
+Youga,Vans,28000
+Youga Custom,Vans,28500
