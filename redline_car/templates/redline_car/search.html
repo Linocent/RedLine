@@ -1,0 +1,14 @@
+{% extends 'redline_car/base.html' %}
+{% block content %}
+{% load static %}
+<header>
+    {% for elt in answer %}
+        <section class="mastheads bg-black">
+            <a href="{% url 'details' vehicule_id=elt.id %}">
+                <img class="h-100" src="{% static ""|add:elt.thumbnail %}">
+            </a>
+        </section>
+    {% endfor %}
+
+</header>
+{% endblock %}

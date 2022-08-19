@@ -1,0 +1,31 @@
+{% extends 'redline_car/base.html' %}
+{% block content %}
+{% load static %}
+{% for elt in vehicule %}
+<header>
+        <section class="mastheads bg-black">
+            <img class="h-100" src="{% static ""|add:elt.thumbnail %}">
+        </section>
+</header>
+<section>
+    <div class="container my-4">
+        <span class="border-0 border-dark">
+            <div class="row">
+                <div class="row d-flex justify-content-around">Nom du véhicule: {{ elt.nom }}</div>
+            </div>
+            <div class="row">
+                <div class="row d-flex justify-content-around">prix: {{ elt.prix }}$</div>
+            </div>
+            <div class="row">
+                <div class="row d-flex justify-content-around">capacité coffre: {{ elt.categorie.poids }}kg</div>
+            </div>
+            <form method="post" action="redline_car/order/" class="form-inline my-2 my-lg-2 col text-center">
+                {% csrf_token %}
+                <input type="hidden" id="vehicule_id" value="{{ elt.id }}">
+                <button class="btn btn-primary btn-sm" type="submit">Commander le véhicule</button>
+            </form>
+        </span>
+    </div>
+</section>
+{% endfor %}
+{% endblock %}
