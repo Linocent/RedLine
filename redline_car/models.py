@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+from user_management.models import Seller
 
 
 class Categorie(models.Model):
@@ -19,3 +21,15 @@ class Vehicule(models.Model):
 
     def __str__(self):
         return f"{self.nom, self.prix, self.categorie, self.thumbnail, self.id}"
+
+
+class Sales(models.Model):
+    id = models.AutoField(primary_key=True)
+    date = models.DateField(auto_now_add=True, blank=True)
+    buyer = models.ForeignKey(User, on_delete=models.CASCADE)
+    seller = models.ForeignKey(Seller, on_delete=models.CASCADE)
+    car = models.ForeignKey(Vehicule, on_delete=models.CASCADE)
+    immat = models.CharField(max_length=20)
+
+    def __str__(self):
+        return f"{self.id, self.date, self.buyer, self.seller, self.car, self.immat}"

@@ -1,7 +1,9 @@
 {% extends 'redline_car/base.html' %}
 
 {% block content %}
+{% load static %}
 <header class="masthead">
+    <img src="{% static 'redline_car/assets/Logo_Souris_Redline.png' %}" class="scroll fixed-bottom mx-auto">
 </header>
 <section class="page-section" id="contact">
     <div class="container px-4 px-lg-5">
@@ -11,7 +13,7 @@
           {{ form.as_p }}
           <div class="d-inline-flex">
               <p>Id discord (exemple: pseudo#1234)</p>
-              <input name="discord_id" value="" type="text" class="form-control" /><br>
+              <input name="discord_id" id="discord_id" value="" type="text" class="form-control" /><br>
           </div>
           <button type="submit">Sign up</button>
       </form>

@@ -34,8 +34,12 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="{% url 'vehicule' %}">véhicules</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Mon compte</a></li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'my_account' %}">Mon compte</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'log_out' %}">Deconnexion</a></li>
+                        {% else %}
                         <li class="nav-item"><a class="nav-link" href="{% url 'log_in' %}">Connexion</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
