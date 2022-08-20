@@ -11708,3 +11708,16 @@ body {
 .footer {
   padding: 5rem 0;
 }
+
+@keyframes scrollanimation {
+  0.0%{}
+  100%{}
+  50%{
+    transform: translate(0px, 20px);
+    opacity: 0.3;
+  }
+}
+
+.scroll{
+  animation: scrollanimation 1s ease 0s infinite normal none;
+}

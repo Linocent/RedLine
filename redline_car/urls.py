@@ -9,5 +9,15 @@ urlpatterns = [
         r'^details/(?P<vehicule_id>[0-9]+)/$',
         views.detail,
         name='details',
+    ),
+    url(
+        r'vehicule/$',
+        views.vehicule,
+        name='vehicule',
+    ),
+    url(
+        r'search/(?P<category_id>[0-9]+)/$',
+        views.search,
+        name='search',
     )
 ]

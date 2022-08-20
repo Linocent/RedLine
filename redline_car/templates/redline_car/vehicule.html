@@ -1,0 +1,20 @@
+{% extends 'redline_car/base.html' %}
+{% block content %}
+{% load static %}
+<header class="masthead">
+</header>
+
+<section>
+    <div class="container my-4 d-flex justify-content-center">
+        <ul>
+            {% for elt in category %}
+                <li>
+                    <a class="text-dark" href="{% url 'search' category_id=elt.id %}">
+                        {{ elt.nom }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}

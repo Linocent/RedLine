@@ -4,7 +4,7 @@
 <header>
     {% for elt in answer %}
         <section class="mastheads bg-black">
-            <a href="{% url 'details' vehicule_id=elt.id %}">
+            <a class="d-flex justify-content-around" href="{% url 'details' vehicule_id=elt.id %}">
                 <img class="h-100" src="{% static ""|add:elt.thumbnail %}">
             </a>
         </section>
