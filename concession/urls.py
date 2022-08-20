@@ -17,12 +17,11 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
-from redline_car import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^redline/', include('redline_car.urls')),
-    url(r'^$', views.index),
+    url(r'^user_management/', include('user_management.urls')),
 ]
 
 if settings.DEBUG:

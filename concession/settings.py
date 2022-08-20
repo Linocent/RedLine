@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1',]
 
 INSTALLED_APPS = [
     'redline_car.apps.RedlineCarConfig',
+    'user_management.apps.UserManagementConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -91,6 +92,8 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
+
+AUTHENTICATION_BACKENDS = ['user_management.backend.EmailBackend']
 
 AUTH_PASSWORD_VALIDATORS = [
     {
