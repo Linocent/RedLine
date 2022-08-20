@@ -5,8 +5,6 @@ from .forms import SignUpForm
 from .backend import EmailBackend
 from django.contrib.auth.models import User
 from .models import Discord
-from random import choice
-from string import ascii_letters
 
 
 def log_in(request):
@@ -29,17 +27,15 @@ def log_in(request):
 def sign_up(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
-        print('form')
         if form.is_valid():
-            print('form is ok')
             password = form.cleaned_data.get('password1')
             email = form.cleaned_data['email']
             first_name = form.cleaned_data.get('first_name')
             last_name = form.cleaned_data.get('last_name')
-            discord_id = form.cleaned_data.get('discord_id')
-            username_fake = ''.join([choice(ascii_letters) for i in range(30)])
+            discord_id = request.POST.get('discord_id')
+            username = f"{first_name}_{last_name}"
             user = User.objects.create_user(
-                username=username_fake,
+                username=username,
                 password=password,
                 email=email,
                 first_name=first_name,
@@ -54,12 +50,11 @@ def sign_up(request):
             discord.save()
             return redirect('log_in')
     else:
-        print('form not ok')
-        form =SignUpForm()
+        form = SignUpForm()
     return render(request, 'user_management/signup.html', {'form': form})
 
 
 @login_required
 def log_out(request):
-    log_out(request)
+    logout(request)
     return redirect('/')

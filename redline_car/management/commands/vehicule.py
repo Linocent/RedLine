@@ -25,7 +25,7 @@ class Command(BaseCommand):
                 f,
                 delimiter=',',
                 quotechar='-'
-        )
+            )
             data = list(spamReader)
             for row in data[1:]:
                 for cat in CATEGORIE:
@@ -34,7 +34,8 @@ class Command(BaseCommand):
                             nom=row[0],
                             categorie=cat,
                             prix=int(row[2]),
-                            thumbnail=f"redline_car/assets/catalogue/{cat.nom}/{row[0]}.jpg"
+                            thumbnail=f"redline_car/assets/catalogue/"
+                                      f"{cat.nom}/{row[0]}.jpg"
                         )
                         print(query)
                         query.save()

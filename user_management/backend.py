@@ -11,7 +11,8 @@ class EmailBackend(ModelBackend):
             user = UserModel.objects.get(
                 Q(email__iexact=username)
             )
-            if user.check_password(password) and self.user_can_authenticate(user):
+            if user.check_password(password) \
+                    and self.user_can_authenticate(user):
                 return user
             else:
                 return None

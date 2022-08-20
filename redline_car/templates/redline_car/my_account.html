@@ -1,0 +1,21 @@
+{% extends 'redline_car/base.html' %}
+{% block content %}
+{% load static %}
+<header>
+<section class="mastheads bg-black d-flex justify-content-around">
+        <img src="{% static 'redline_car/assets/Logo_Souris_Redline.png' %}" class="scroll fixed-bottom mx-auto">
+        <img class="h-100" src="{% static "redline_car/assets/img/redline_logo.png" %}">
+</section>
+</header>
+<section class="bg-white d-flex flex-column justify-content-around text-center">
+    <p> Bien le bonjour {{ username }}!<br></p>
+    {% if not message %}
+        <p>Voici la liste des véhicules que vous avez acheté chez nous:</p>
+        {% for elt in car_bought %}
+            <img class="img-thumbnail mx-auto" src="{% static ""|add:elt.car.thumbnail %}" width="200px">
+        {% endfor %}
+    {% else %}
+        <p>{{ message }}</p>
+    {% endif %}
+</section>
+{% endblock %}

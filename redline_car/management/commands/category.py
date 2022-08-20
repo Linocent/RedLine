@@ -2,7 +2,6 @@
 """
 Pour utiliser cette commande: python manage.py category
 """
-import os
 import csv
 from django.core.management.base import BaseCommand
 from redline_car.models import Categorie

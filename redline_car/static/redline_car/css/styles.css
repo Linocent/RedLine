@@ -11721,3 +11721,11 @@ body {
 .scroll{
   animation: scrollanimation 1s ease 0s infinite normal none;
 }
+
+.vehicule_name{
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  text-align: center;
+  background-color: #1fe0;
+}

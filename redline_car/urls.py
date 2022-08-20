@@ -11,13 +11,23 @@ urlpatterns = [
         name='details',
     ),
     url(
-        r'vehicule/$',
+        r'^vehicule/$',
         views.vehicule,
         name='vehicule',
     ),
     url(
-        r'search/(?P<category_id>[0-9]+)/$',
+        r'^search/(?P<category_id>[0-9]+)/$',
         views.search,
         name='search',
-    )
+    ),
+    url(
+        r'^order/$',
+        views.order,
+        name='order',
+    ),
+    url(
+        r'^my_account/$',
+        views.my_account,
+        name='my_account',
+    ),
 ]
