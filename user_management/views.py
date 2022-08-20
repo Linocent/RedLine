@@ -17,7 +17,6 @@ def log_in(request):
             password=password,
         )
         if user is not None:
-            print(user)
             login(request, user)
             return redirect('/')
         else:
@@ -51,7 +50,6 @@ def sign_up(request):
             discord.save()
             return redirect('log_in')
     else:
-        print('form not ok')
         form = SignUpForm()
     return render(request, 'user_management/signup.html', {'form': form})
 

@@ -88,7 +88,8 @@ def order(request):
             print(f"Webhook sent {result.status_code}")
             return redirect('/')
         else:
-            print(f"Not sent with {result.status_code}, response:\n{result.json()}")
+            print(f"Not sent with {result.status_code},"
+                  f" response:\n{result.json()}")
             return HttpResponse(status=400)
 
 
@@ -105,8 +106,10 @@ def my_account(request):
             {'username': username, 'car_bought': car_bought},
         )
     else:
-        message = "Vous n'avez pas encore acheté de véhicule chez nous.\n" \
-                  "Nous sommes à votre disposition pour discuter de votre projet automobile."
+        message = "Vous n'avez pas encore acheté de véhicule " \
+                  "chez nous.\n" \
+                  "Nous sommes à votre disposition pour " \
+                  "discuter de votre projet automobile."
         return render(
             request,
             'redline_car/my_account.html',

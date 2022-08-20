@@ -44,7 +44,10 @@ class IndexPageTest(TestCase):
         self.assertEqual(response.status_code, 200)
         response = self.client.get('/?query=no_vehicule')
         self.assertTemplateUsed(response, 'redline_car/404.html')
-        self.assertEqual(response.context['message'], 'Aucun résultat trouvé pour no_vehicule.')
+        self.assertEqual(
+            response.context['message'],
+            'Aucun résultat trouvé pour no_vehicule.'
+        )
 
 
 class SeachPageTest(TestCase):
@@ -66,7 +69,10 @@ class SeachPageTest(TestCase):
         self.vehicule.save()
 
     def test_search_page(self):
-        response = self.client.get(reverse('search', kwargs={'category_id': '1'}))
+        response = self.client.get(reverse(
+            'search',
+            kwargs={'category_id': '1'}
+        ))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'redline_car/search.html')
         vehicule = Vehicule.objects.all()
@@ -94,7 +100,10 @@ class DetailPageTest(TestCase):
         vehicule.save()
 
     def test_detail_page(self):
-        response = self.client.get(reverse('details', kwargs={'vehicule_id': '1'}))
+        response = self.client.get(reverse(
+            'details',
+            kwargs={'vehicule_id': '1'}
+        ))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'redline_car/detail.html')
 
@@ -160,7 +169,10 @@ class OrderPageTest(TestCase):
         self.client.logout()
         response = self.client.post(reverse('order'), data={'vehicule_id': 1})
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, '/user_management/log_in/?next=/redline/order/')
+        self.assertRedirects(
+            response,
+            '/user_management/log_in/?next=/redline/order/'
+        )
 
 
 class AccountPageTest(TestCase):
@@ -220,4 +232,7 @@ class AccountPageTest(TestCase):
         self.client.logout()
         response = self.client.get(reverse('my_account'))
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, '/user_management/log_in/?next=/redline/my_account/')
+        self.assertRedirects(
+            response,
+            '/user_management/log_in/?next=/redline/my_account/'
+        )

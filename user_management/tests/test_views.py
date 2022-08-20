@@ -1,12 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
-from redline_car.models import (
-    Categorie,
-    Vehicule,
-    Sales,
-)
-from user_management.models import Discord, Seller
 
 
 class SignUpTest(TestCase):
