@@ -3,6 +3,8 @@
 Pour utiliser cette commande: python manage.py vehicule
 """
 import csv
+import os
+
 from django.core.management.base import BaseCommand
 from redline_car.models import Categorie, Vehicule
 
@@ -15,18 +17,22 @@ class Command(BaseCommand):
         CATEGORIE = Categorie.objects.all()
         CLEAR_VEHICULE = Vehicule.objects.all()
         CLEAR_VEHICULE.delete()
+        db_file = os.path.join(
+            os.path.abspath(
+                os.path.dirname('manage.py')),
+            'redline_car/management/commands/redline_db_categorie.csv'
+        )
 
         with open(
-                "/home/le_shtroumpf/OC/RedLine//redline_car/"
-                "management/commands/redline_db.csv",
+                db_file,
                 newline='',
         ) as f:
-            spamReader = csv.reader(
+            spamreader = csv.reader(
                 f,
                 delimiter=',',
                 quotechar='-'
             )
-            data = list(spamReader)
+            data = list(spamreader)
             for row in data[1:]:
                 for cat in CATEGORIE:
                     if str(cat.nom) == row[1]:
