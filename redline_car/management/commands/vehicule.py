@@ -14,25 +14,29 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
+        print('here')
         CATEGORIE = Categorie.objects.all()
         CLEAR_VEHICULE = Vehicule.objects.all()
         CLEAR_VEHICULE.delete()
         db_file = os.path.join(
             os.path.abspath(
                 os.path.dirname('manage.py')),
-            'redline_car/management/commands/redline_db_categorie.csv'
+            'redline_car/management/commands/redline_db.csv'
         )
 
         with open(
                 db_file,
                 newline='',
         ) as f:
+            print('here')
             spamreader = csv.reader(
                 f,
                 delimiter=',',
                 quotechar='-'
             )
+            print(spamreader)
             data = list(spamreader)
+            print(data)
             for row in data[1:]:
                 for cat in CATEGORIE:
                     if str(cat.nom) == row[1]:
