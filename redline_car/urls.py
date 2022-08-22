@@ -30,4 +30,8 @@ urlpatterns = [
         views.my_account,
         name='my_account',
     ),
+    url(r'^legal_mention',
+        views.legal_mention,
+        name='legal_mention',
+    ),
 ]
