@@ -61,7 +61,9 @@ else:
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'redlinerpfr.herokuapp.com'
+    'redlinerpfr.herokuapp.com',
+    '164.92.90.126',
+    'leshtroumpf.site',
 ]
 
 
@@ -90,6 +92,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'concession.urls'
