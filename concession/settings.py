@@ -55,7 +55,6 @@ if os.environ.get('ENV') == 'PRODUCTION':
     ]
     # Simplified static file serving
     # https://warehouse.python.org/project/whitenoise/
-    db_from_env = dj_database_url.config(conn_max_age=500)
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 else:
     DEBUG = True
