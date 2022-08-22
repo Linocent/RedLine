@@ -115,3 +115,7 @@ def my_account(request):
             'redline_car/my_account.html',
             {'username': username, 'message': message}
         )
+
+
+def legal_mention(request):
+    return render(request, 'redline_car/legal_mention.html')
