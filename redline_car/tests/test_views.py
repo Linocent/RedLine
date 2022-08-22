@@ -236,3 +236,10 @@ class AccountPageTest(TestCase):
             response,
             '/user_management/log_in/?next=/redline/my_account/'
         )
+
+
+class LegalMentionPageTest(TestCase):
+    def test_legal_mention(self):
+        response = self.client.get(reverse('legal_mention'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'redline_car/legal_mention.html')

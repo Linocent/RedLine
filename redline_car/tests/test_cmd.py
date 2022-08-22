@@ -7,12 +7,8 @@ from redline_car.models import (
 
 
 class CategoryTest(TestCase):
-    def test_category_cmd(self):
+    def test_cmd(self):
         call_command('category')
         self.assertEqual(Categorie.objects.count(), 16)
-
-
-class VehiculeTest(TestCase):
-    def test_vehicule_cmd(self):
         call_command('vehicule')
         self.assertEqual(Vehicule.objects.count(), 386)
