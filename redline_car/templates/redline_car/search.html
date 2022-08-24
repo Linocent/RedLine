@@ -5,10 +5,10 @@
     <img src="{% static 'redline_car/assets/Logo_Souris_Redline.png' %}" class="scroll fixed-bottom mx-auto">
     {% for elt in answer %}
         <section class="mastheads bg-black">
-            <a class="d-flex justify-content-around align-items-center" href="{% url 'details' vehicule_id=elt.id %}">
-                <img class="h-100" src="{% static ""|add:elt.thumbnail %}">
-                <p class="vehicule_name">{{ elt.nom }}</p>
-            </a>
+                <a class="d-flex justify-content-around align-items-center" href="{% url 'details' vehicule_id=elt.id %}">
+                    <img class="h-100" src="{% static ""|add:elt.thumbnail %}">
+                    <p class="vehicule_name m-lg-3 text-white">{{ elt.nom }}</p>
+                </a>
         </section>
     {% endfor %}
 
