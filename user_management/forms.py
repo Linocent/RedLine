@@ -18,3 +18,17 @@ class SignUpForm(UserCreationForm):
             'password1',
             'password2',
         )
+
+
+class LoginForm(forms.Form):
+    email = forms.EmailField(
+        max_length=100,
+        help_text='Recquière un mail RP valide.'
+    )
+
+    class Meta:
+        model = User
+        fields = (
+            'email',
+            'password',
+        )

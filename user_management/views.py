@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
-from .forms import SignUpForm
+from .forms import SignUpForm, LoginForm
 from .backend import EmailBackend
 from django.contrib.auth.models import User
 from .models import Discord
@@ -9,19 +9,21 @@ from .models import Discord
 
 def log_in(request):
     if request.method == 'POST':
-        email = request.POST['email']
-        password = request.POST['password']
-        user = EmailBackend().authenticate(
-            request,
-            username=email,
-            password=password,
-        )
-        if user is not None:
-            login(request, user)
-            return redirect('/')
-        else:
-            return None
-    return render(request, 'user_management/login.html')
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            email = request.POST['email']
+            password = request.POST['password']
+            user = EmailBackend().authenticate(
+                request,
+                username=email,
+                password=password,
+            )
+            if user is not None:
+                login(request, user)
+                return redirect('/')
+    else:
+        form = LoginForm()
+    return render(request, 'user_management/login.html', {'form': form})
 
 
 def sign_up(request):
