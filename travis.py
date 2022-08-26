@@ -1,5 +1,5 @@
 import os
-from concession import *
+from concession.settings import *
 
 DATABASE = {
     'default': {
