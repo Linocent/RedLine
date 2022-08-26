@@ -1,11 +1,11 @@
 import os
 from concession.settings import *
 
-DATABASE = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'redline',
-        'USER': 'postgres',
+        'USER': 'concessionaire',
         'PASSWORD': '',
         'HOST': '',
         'PORT': '',
