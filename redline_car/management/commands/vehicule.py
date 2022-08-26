@@ -14,7 +14,6 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
-        print('here')
         CATEGORIE = Categorie.objects.all()
         CLEAR_VEHICULE = Vehicule.objects.all()
         CLEAR_VEHICULE.delete()
@@ -28,24 +27,22 @@ class Command(BaseCommand):
                 db_file,
                 newline='',
         ) as f:
-            print('here')
             spamreader = csv.reader(
                 f,
                 delimiter=',',
                 quotechar='-'
             )
-            print(spamreader)
             data = list(spamreader)
-            print(data)
             for row in data[1:]:
                 for cat in CATEGORIE:
                     if str(cat.nom) == row[1]:
+                        photo_name = row[0].replace(" ", "_")
                         query = Vehicule(
                             nom=row[0],
                             categorie=cat,
                             prix=int(row[2]),
                             thumbnail=f"redline_car/assets/catalogue/"
-                                      f"{cat.nom}/{row[0]}.jpg"
+                                      f"{cat.nom}/{photo_name}.jpg"
                         )
                         print(query)
                         query.save()

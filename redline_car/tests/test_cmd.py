@@ -11,4 +11,4 @@ class CategoryTest(TestCase):
         call_command('category')
         self.assertEqual(Categorie.objects.count(), 16)
         call_command('vehicule')
-        self.assertEqual(Vehicule.objects.count(), 386)
+        self.assertEqual(Vehicule.objects.count(), 380)

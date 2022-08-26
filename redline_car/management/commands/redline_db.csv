@@ -209,8 +209,7 @@ Stratum,Sedan,70000
 Stretch,Sedan,90000
 Super D,Sedan,90000
 Surge,Sedan,75000
-Taligater,Sedan,80000
-Warrener,Sedan,85000
+Tailgater,Sedan,80000
 Washington,Sedan,80000
 Tailgater Sport,Sedan,90000
 Alpha,Sportive,415000
@@ -263,7 +262,6 @@ Rapid GT,Sportive,415000
 Rapid GT Cabriolet,Sportive,415000
 Raptor,Sportive,350000
 Ruston,Sportive,410000
-Schafter Classique,Sportive,400000
 Schafter,Sportive,415000
 Schafter V12,Sportive,430000
 Schwarzer,Sportive,430000
@@ -286,7 +284,6 @@ Futo Sport,Sportive,400000
 Euros,Sportive,420000
 Jester GT,Sportive,425000
 Remus,Sportive,410000
-Sultan Retro Custom,Sportive,400000
 RT 3000,Sportive,410000
 Arden,Sportive Classique,135000
 Casco,Sportive Classique,130000
@@ -304,7 +301,6 @@ Michelli,Sportive Classique,35000
 Monroe,Sportive Classique,135000
 Nebula,Sportive Classique,35000
 Peyote Cabriolet,Sportive Classique,42500
-Peyote,Sportive Classique,45000
 Pigalle,Sportive Classique,60000
 Rapid GT Retro,Sportive Classique,130000
 Retinue,Sportive Classique,52000
@@ -320,7 +316,6 @@ Tornado Cabriolet,Sportive Classique,37600
 Tornado Classique,Sportive Classique,25000
 Tornado Classique Cabriolet,Sportive Classique,27000
 Tornado Luxe,Sportive Classique,36000
-Turismo Retro,Sportive Classique,135880
 Viseris,Sportive Classique,135000
 Zion Retro,Sportive Classique,50000
 Cheburek,Sportive Classique,120000
@@ -348,7 +343,6 @@ Penetrator,Supercar,348800
 Pfister 811,Supercar,414600
 X-80 Proto,Supercar,440000
 Reaper,Supercar,380200
-S 80,Supercar,375280
 SC 1,Supercar,325000
 Sultan RS,Supercar,315800
 T 20,Supercar,404800
