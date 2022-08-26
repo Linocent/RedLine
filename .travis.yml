@@ -2,6 +2,7 @@ language: python
 python:
   - '3.8'
 
+# safelist
 branches:
   only:
     - staging
@@ -15,8 +16,9 @@ before_script:
 
 env: DJANGO_SETTINGS_MODULE=travis
 
+# command to run test
 script:
   - python3 manage.py makemigrations
   - python3 manage.py migrate
   - python3 manage.py test redline_car/tests
-  - python3 manage.py test user_management/tests
+  - python manage.py test user_management/tests
