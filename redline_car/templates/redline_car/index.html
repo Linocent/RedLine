@@ -5,12 +5,12 @@
         <header class="masthead">
             <img src="{% static 'redline_car/assets/Logo_Souris_Redline.png' %}" class="scroll fixed-bottom mx-auto">
         </header>
-        <!-- About-->
-        <section class="about-section text-center" id="about">
-            <div class="container px-4 px-lg-5">
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5 text-center">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="text-white mb-4">Toutes vos envies en une recherche</h2>
+                        <h2 class="mb-4">Toutes vos envies en une recherche</h2>
                         <form class="form-inline my-2 my-lg-0">
                             <input
                                     class="form-control mr-sm-2"
@@ -18,15 +18,13 @@
                                     placeholder="Nom véhicule"
                                     aria-label="Search"
                                     name="query"
+                                    id="search-input"
                             >
                             <button class="btn btn-primary btn-sm" type="submit">Rechercher</button>
                         </form>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Projects-->
-        <section class="projects-section bg-light" id="projects">
             <div class="container px-4 px-lg-5">
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
