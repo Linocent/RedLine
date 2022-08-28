@@ -9,6 +9,7 @@ from .models import Categorie, Vehicule, Sales
 
 def index(request):
     query = request.GET.get('query')
+    vehicules = Vehicule.objects.all()
     if query:
         answer = Vehicule.objects.filter(nom__icontains=query)
         if answer.exists():
@@ -24,7 +25,7 @@ def index(request):
         else:
             message = f"Aucun résultat trouvé pour {query}."
             return page_not_found(request, message)
-    return render(request, "redline_car/index.html")
+    return render(request, "redline_car/index.html", {'vehicules': vehicules})
 
 
 def search(request, category_id):
