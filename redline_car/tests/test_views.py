@@ -102,8 +102,8 @@ class DetailPageTest(TestCase):
     def test_detail_page(self):
         response = self.client.get(reverse(
             'details',
-            kwargs={'vehicule_id': '1'}
-        ))
+            kwargs={'vehicule_id': '1'}),
+            data={'msg': ''})
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'redline_car/detail.html')
 
@@ -164,8 +164,7 @@ class OrderPageTest(TestCase):
 
     def test_order_page(self):
         response = self.client.post(reverse('order'), data={'vehicule_id': 1})
-        self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, '/')
+        self.assertEqual(response.status_code, 200)
         self.client.logout()
         response = self.client.post(reverse('order'), data={'vehicule_id': 1})
         self.assertEqual(response.status_code, 302)

@@ -27,6 +27,9 @@
                 <button class="btn btn-primary btn-sm" type="submit">Commander le véhicule</button>
             </form>
             {% endif %}
+            {% if msg %}
+                <p class="text-center">{{ msg }}</p>
+            {% endif %}
         </span>
     </div>
 </section>
