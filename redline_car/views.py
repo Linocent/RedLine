@@ -21,7 +21,7 @@ def index(request):
                 )
             else:
                 answer = Vehicule.objects.get(nom__icontains=query)
-                return detail(request, answer.id)
+                return detail(request, answer.id, '')
         else:
             message = f"Aucun résultat trouvé pour {query}."
             return page_not_found(request, message)
@@ -37,12 +37,12 @@ def search(request, category_id):
     )
 
 
-def detail(request, vehicule_id):
+def detail(request, vehicule_id, *args):
     vehicule = Vehicule.objects.filter(id__exact=vehicule_id)
     return render(
         request,
         'redline_car/detail.html',
-        context={'vehicule': vehicule},
+        context={'vehicule': vehicule, 'msg': args},
     )
 
 
@@ -87,7 +87,10 @@ def order(request):
         print(result.status_code)
         if 200 <= result.status_code < 300:
             print(f"Webhook sent {result.status_code}")
-            return redirect('/')
+            msg = 'Votre commande à bien été prise en ' \
+                  'compte, un concessionaire vous ' \
+                  'contactera pour la suite.'
+            return detail(request, car, msg)
         else:
             print(f"Not sent with {result.status_code},"
                   f" response:\n{result.json()}")
