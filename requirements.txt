@@ -16,4 +16,4 @@ gunicorn
 pytest-django
 sentry-sdk
 raven
-
+coverage
