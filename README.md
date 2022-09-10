@@ -22,3 +22,7 @@ L'application propose également la possibilité aux concessionaire d'enregistre
 7. Puis vous pouvez lancer l'application avec ```python3 manage.py runserver```;
 
 Pour tout déploiement sur serveur privé, il va falloir installer et paramétrer Nginx, ajouter les adresses autorisé dans le fichier ```settings.py```.
+
+Pour utiliser flake8, il faut tout simplement entrer la commande ```flake8```.
+
+leano.pablo@gmail.com
