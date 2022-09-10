@@ -29,15 +29,32 @@ class IndexPageTest(TestCase):
         )
         self.vehicule.save()
 
+        self.vehicule = Vehicule.objects.create(
+            id=2,
+            nom='Blista',
+            categorie=self.categorie,
+            prix='2000',
+            thumbnail='img/thumbnail2.jpg'
+        )
+        self.vehicule.save()
+        self.vehicule = Vehicule.objects.create(
+            id=3,
+            nom='Jester',
+            categorie=self.categorie,
+            prix='3000',
+            thumbnail='img/thumbnail3.jpg'
+        )
+        self.vehicule.save()
+
     def test_index_page(self):
         response = self.client.get(reverse('index'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'redline_car/index.html')
 
-    def test_query(self):
+    def test_query_unique_answer(self):
         response = self.client.post(
             '/redline/',
-            data={'query': 'Blista'}
+            data={'query': 'Jester'}
         )
         self.assertEqual(response.status_code, 200)
         response = self.client.get('/?query=Blista')
@@ -48,6 +65,17 @@ class IndexPageTest(TestCase):
             response.context['message'],
             'Aucun résultat trouvé pour no_vehicule.'
         )
+
+    def test_query_many_answer(self):
+        response = self.client.post(
+            '/redline/',
+            data={'query': 'Blista'}
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed('redline_car/search.html')
+
+
+
 
 
 class SeachPageTest(TestCase):
