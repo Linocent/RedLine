@@ -24,5 +24,5 @@ L'application propose également la possibilité aux concessionaire d'enregistre
 Pour tout déploiement sur serveur privé, il va falloir installer et paramétrer Nginx, ajouter les adresses autorisé dans le fichier ```settings.py```.
 
 Pour utiliser flake8, il faut tout simplement entrer la commande ```flake8```.
-
+Pour exécuter les tests, il faut utiliser ```coverage run --source='.' manage.py test``` et ```coverage report``` pour vérifier la taux de couverture des tests.
 leano.pablo@gmail.com
