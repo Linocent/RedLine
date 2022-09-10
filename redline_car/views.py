@@ -1,4 +1,5 @@
 import requests
+import os
 from django.shortcuts import render, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -70,7 +71,7 @@ def order(request):
         car_ordered = Vehicule.objects.get(id__exact=car)
         user = request.user
         discord = Discord.objects.get(user=user)
-        url = "https://discord.com/api/webhooks/925042971689246743/K8AAEcmx5W4DMh-LPkSEWb8mqEQsgF02WfCIxFr6QZZyjZy7HOsAsBChJ3Z-vdQ7VfK-"  # noqa
+        url = os.environ.get('DISCORDURL')  # noqa
         embed = {
             "description": f"{user.username} ({discord.discord_id}"
                            f") a commandé {car_ordered.nom} qui "
