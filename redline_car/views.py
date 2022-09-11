@@ -84,18 +84,22 @@ def order(request):
                 embed
             ]
         }
-        result = requests.post(url, json=data)
-        print(result.status_code)
-        if 200 <= result.status_code < 300:
-            print(f"Webhook sent {result.status_code}")
-            msg = 'Votre commande à bien été prise en ' \
-                  'compte, un concessionaire vous ' \
-                  'contactera pour la suite.'
-            return detail(request, car, msg)
+        if url:
+            result = requests.post(url, json=data)
+            print(result.status_code)
+            if 200 <= result.status_code < 300:
+                print(f"Webhook sent {result.status_code}")
+                msg = 'Votre commande à bien été prise en ' \
+                      'compte, un concessionaire vous ' \
+                      'contactera pour la suite.'
+                return detail(request, car, msg)
+            else:
+                print(f"Not sent with {result.status_code},"
+                      f" response:\n{result.json()}")
+                return HttpResponse(status=400)
         else:
-            print(f"Not sent with {result.status_code},"
-                  f" response:\n{result.json()}")
-            return HttpResponse(status=400)
+            msg = 'Oups! Il y a un soucis avec discord, veuillez réessayer plus tart'
+            return detail(request, car, msg)
 
 
 @login_required(login_url='log_in')
