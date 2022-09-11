@@ -26,4 +26,3 @@ Pour tout déploiement sur serveur privé, il va falloir installer et paramétre
 
 Pour utiliser flake8, il faut tout simplement entrer la commande ```flake8```\
 Pour exécuter les tests, il faut utiliser ```coverage run --source='.' manage.py test``` et ```coverage report``` pour vérifier la taux de couverture des tests.
-leano.pablo@gmail.com
