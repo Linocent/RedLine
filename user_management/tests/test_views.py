@@ -72,5 +72,3 @@ class LogInTest(TestCase):
     def test_backend(self):
         response = EmailBackend().authenticate(None, None)
         self.assertEqual(response, None)
-
-

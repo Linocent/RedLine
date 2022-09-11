@@ -75,9 +75,6 @@ class IndexPageTest(TestCase):
         self.assertTemplateUsed('redline_car/search.html')
 
 
-
-
-
 class SeachPageTest(TestCase):
     def setUp(self):
         categorie = Categorie.objects.create(

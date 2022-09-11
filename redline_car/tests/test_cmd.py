@@ -50,4 +50,3 @@ class VehiculeTest(TestCase):
     def test_vehicule_cmd(self):
         call_command('vehicule')
         self.assertEqual(Vehicule.objects.count(), 380)
-
