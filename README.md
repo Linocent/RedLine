@@ -19,10 +19,11 @@ L'application propose également la possibilité aux concessionaire d'enregistre
 4. Installer les dépendances du projet avec ```pip install -r requirements.txt```;
 5. Réaliser les migrations du projet avec ```python3 manage.py makemigrations``` et ```python3 manage.py migrate```;
 6. Lancer les commandes pour remplir la base de données avec ```python3 manage.py category``` et ```python3 manage.py vehicule```;
-7. Puis vous pouvez lancer l'application avec ```python3 manage.py runserver```;
+7. Entrer l'url du channel discord en variable d'environnement ```DISCORDURL```; 
+8. Puis vous pouvez lancer l'application avec ```python3 manage.py runserver```;
 
 Pour tout déploiement sur serveur privé, il va falloir installer et paramétrer Nginx, ajouter les adresses autorisé dans le fichier ```settings.py```.
 
-Pour utiliser flake8, il faut tout simplement entrer la commande ```flake8```.
+Pour utiliser flake8, il faut tout simplement entrer la commande ```flake8```\
 Pour exécuter les tests, il faut utiliser ```coverage run --source='.' manage.py test``` et ```coverage report``` pour vérifier la taux de couverture des tests.
 leano.pablo@gmail.com
