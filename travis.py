@@ -1,5 +1,4 @@
-import os
-from concession.settings import *
+from concession.settings import *  # noqa
 
 DATABASES = {
     'default': {

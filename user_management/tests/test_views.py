@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
+from ..backend import EmailBackend
 
 
 class SignUpTest(TestCase):
@@ -19,7 +20,6 @@ class SignUpTest(TestCase):
                 'discord_id': 'discord_id#1452',
             }
         )
-        print(response.context)
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, '/user_management/log_in/')
         user = User.objects.count()
@@ -43,7 +43,7 @@ class LogInTest(TestCase):
             password='12456789',
         )
 
-    def test_sign_in(self):
+    def test_log_in(self):
         response = self.client.get(reverse('log_in'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'user_management/login.html')
@@ -58,3 +58,17 @@ class LogInTest(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, '/')
         self.assertTemplateUsed((response, 'redline/index.html'))
+
+    def test_invalid_login_form(self):
+        response = self.client.post(
+            reverse('log_in'),
+            data={
+                'email': 'test@test.com',
+                'password': '987654321',
+            },
+        )
+        self.assertEqual(response.status_code, 200)
+
+    def test_backend(self):
+        response = EmailBackend().authenticate(None, None)
+        self.assertEqual(response, None)

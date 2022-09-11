@@ -33,5 +33,5 @@ urlpatterns = [
     url(r'^legal_mention',
         views.legal_mention,
         name='legal_mention',
-    ),
+        ),
 ]
