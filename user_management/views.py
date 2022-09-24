@@ -8,6 +8,7 @@ from .models import Discord
 
 
 def log_in(request):
+    """Log_in page"""
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -27,6 +28,7 @@ def log_in(request):
 
 
 def sign_up(request):
+    """sign_up page"""
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():

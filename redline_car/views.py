@@ -9,6 +9,7 @@ from .models import Categorie, Vehicule, Sales
 
 
 def index(request):
+    """Index of the website, it manage the search input"""
     query = request.GET.get('query')
     vehicules = Vehicule.objects.all()
     if query:
@@ -30,6 +31,7 @@ def index(request):
 
 
 def search(request, category_id):
+    """return search answer if there are more than 1 car"""
     answer = Vehicule.objects.filter(categorie=category_id)
     return render(
         request,
@@ -39,6 +41,7 @@ def search(request, category_id):
 
 
 def detail(request, vehicule_id, *args):
+    """Display all detail about selected car"""
     vehicule = Vehicule.objects.filter(id__exact=vehicule_id)
     return render(
         request,
@@ -48,6 +51,7 @@ def detail(request, vehicule_id, *args):
 
 
 def vehicule(request):
+    """Display all car of a category"""
     category = Categorie.objects.all()
     return render(
         request,
@@ -66,6 +70,7 @@ def page_not_found(request, message):
 
 @login_required(login_url='log_in')
 def order(request):
+    """Notify seller on discord when user order a car"""
     if request.method == 'POST':
         car = request.POST.get('vehicule_id')
         car_ordered = Vehicule.objects.get(id__exact=car)
@@ -104,6 +109,7 @@ def order(request):
 
 @login_required(login_url='log_in')
 def my_account(request):
+    """Account page with car bought"""
     user = request.user
     identified_user = User.objects.get(username=user)
     username = str(user).replace('_', ' ')
