@@ -9,6 +9,7 @@ from .models import Categorie, Vehicule, Sales
 
 
 def index(request):
+    """Index of the website, it manage the search input"""
     query = request.GET.get('query')
     vehicules = Vehicule.objects.all()
     if query:
@@ -30,6 +31,7 @@ def index(request):
 
 
 def search(request, category_id):
+    """return search answer if there are more than 1 car"""
     answer = Vehicule.objects.filter(categorie=category_id)
     return render(
         request,
@@ -39,6 +41,7 @@ def search(request, category_id):
 
 
 def detail(request, vehicule_id, *args):
+    """Display all detail about selected car"""
     vehicule = Vehicule.objects.filter(id__exact=vehicule_id)
     return render(
         request,
@@ -48,6 +51,7 @@ def detail(request, vehicule_id, *args):
 
 
 def vehicule(request):
+    """Display all car of a category"""
     category = Categorie.objects.all()
     return render(
         request,
@@ -66,6 +70,7 @@ def page_not_found(request, message):
 
 @login_required(login_url='log_in')
 def order(request):
+    """Notify seller on discord when user order a car"""
     if request.method == 'POST':
         car = request.POST.get('vehicule_id')
         car_ordered = Vehicule.objects.get(id__exact=car)
@@ -84,22 +89,27 @@ def order(request):
                 embed
             ]
         }
-        result = requests.post(url, json=data)
-        print(result.status_code)
-        if 200 <= result.status_code < 300:
-            print(f"Webhook sent {result.status_code}")
-            msg = 'Votre commande à bien été prise en ' \
-                  'compte, un concessionaire vous ' \
-                  'contactera pour la suite.'
-            return detail(request, car, msg)
+        if url:
+            result = requests.post(url, json=data)
+            print(result.status_code)
+            if 200 <= result.status_code < 300:
+                print(f"Webhook sent {result.status_code}")
+                msg = 'Votre commande à bien été prise en ' \
+                      'compte, un concessionaire vous ' \
+                      'contactera pour la suite.'
+                return detail(request, car, msg)
+            else:
+                print(f"Not sent with {result.status_code},"
+                      f" response:\n{result.json()}")
+                return HttpResponse(status=400)
         else:
-            print(f"Not sent with {result.status_code},"
-                  f" response:\n{result.json()}")
-            return HttpResponse(status=400)
+            msg = 'Oups! Il y a un soucis avec discord, veuillez réessayer plus tart'
+            return detail(request, car, msg)
 
 
 @login_required(login_url='log_in')
 def my_account(request):
+    """Account page with car bought"""
     user = request.user
     identified_user = User.objects.get(username=user)
     username = str(user).replace('_', ' ')
